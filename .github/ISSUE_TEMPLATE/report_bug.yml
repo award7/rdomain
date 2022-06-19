@@ -1,0 +1,74 @@
+name: report_bug
+description: Report a bug.
+title: "[Bug]: "
+labels:
+  - "bug"
+  - "triage"
+body:
+  - type: input
+    id: summary
+    attributes:
+      label: Summary of bug.
+      placeholder: "ex: Dialog box does not close."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to reproduce.
+      placeholder: "ex: 1) Open dialog. 2) Click on close button."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected action or result.
+      placeholder: "ex: Dialog box should close."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual action or result.
+      placeholder: "ex: Dialog box does not close."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity of bug.
+      options:
+        - Minor
+        - Moderate
+        - High
+        - Critical
+      multiple: false
+    validations:
+      required: true
+
+  - type: input
+    id: environment
+    attributes:
+      label: The environment in which the bug was discovered and reproduced.
+      placeholder: "[platform] [os] [build]"
+    validations:
+      required: true
+
+  - type: input
+    id: release
+    attributes:
+      label: The release, tag, or commit and branch (if applicable)
+      placeholder: "ex: v1.0 | commit abc123 on alpha | v1.1-beta"
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Additional notes.
+    validations:
+      required: false
