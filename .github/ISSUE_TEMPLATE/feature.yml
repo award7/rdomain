@@ -1,0 +1,52 @@
+name: Feature
+description: Request a feature.
+title: "[Feature]: "
+labels:
+  - "enhancement"
+  - "triage"
+body:
+  - type: inputdoc
+    id: summary
+    attributes:
+      label: Summary of feature.
+      placeholder: "ex: Allow 24 hour clock time input."
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed description of feature. Be sure to describe how you envision this feature working.
+    validations:
+      required: true
+
+  - type: textarea
+    id: significance
+    attributes:
+      label: What gap or improvement will this feature serve?
+    validations:
+      required: true
+
+  - type: dropdown
+    id: categories
+    attributes:
+      label: Category/categories of feature.
+      options:
+        - Core
+        - UI/UX
+        - QA/QC
+      multiple: true
+    validations:
+      required: true
+
+  - type: dropdown
+    id: effort
+    attributes:
+      label: Effort estimation for implementing this feature.
+      options:
+        - Low
+        - Medium
+        - Large
+      multiple: false
+    validations:
+      required: true
